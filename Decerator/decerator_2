@@ -1,0 +1,45 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Nov  3 00:06:50 2019
+
+@author: mac
+"""
+
+
+
+def ekstra(fonk):
+    
+    def ekstra_ozellik():
+        print("Mükemmel Sayılar...")
+        for sayi in range(1,1001):
+            toplam = 0
+            i = 1
+            while (i < sayi):
+                if (sayi % i == 0):
+                    toplam += i
+                i +=1
+            if (toplam == sayi):
+                print(sayi)
+        fonk()
+                
+    return ekstra_ozellik
+    
+
+
+@ekstra
+def asal_sayilar():
+    print("Asal Sayılar...")
+    for sayi in range(2,1001):
+         if sayi > 1:
+       
+             for i in range(2,sayi):
+                 if (sayi % i) == 0:
+                     break
+                 else:
+                     print(sayi)
+                     
+            
+        
+            
+asal_sayilar() 
